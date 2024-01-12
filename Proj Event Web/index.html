@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>RTB | Recruiters Training Hub - Home</title>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand navbar-fixed-top">
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <section>
+        <div class="header">
+            <div class="img">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="images/home.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Recruiters Training Hub</h5>
+                            </div>
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                </div>
+            </div>
+            <div class="Overlay"></div>
+        </div>
+    </section>
+    <!-- Header End -->
+
+    <!-- Home Page Content Start -->
+    <section class="home-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Welcome to RTB | Recruiters Training Hub!</h2>
+                    <p>
+                        If you're interested in pursuing a career as a US IT recruiter, domestic IT recruiter, or non-IT
+                        recruiter, you've found the perfect destination. We provide comprehensive training programs for
+                        recruiters at all levels, catering to both newcomers and seasoned professionals looking to enhance
+                        their skills and thrive in the dynamic world of recruitment. We also offer support in finding
+                        employment until you secure a position.
+                    </p>
+                    <p>
+                        Our training programs provide practical exposure in recruitment, with a focus on HR and sales. We
+                        offer comprehensive training in written and oral English communication, as well as placement
+                        assistance and on-the-job support. Recruiters are expected to have certain prerequisites,
+                        regardless of whether they are from IIT or non-IIT backgrounds. These prerequisites include having
+                        a degree, good communication skills in English, and a basic understanding of technical knowledge.
+                        Additionally, recruiters should be familiar with the topics that will be covered during refreshers.
+                        Effective communication, understanding office dynamics, developing soft skills and personality,
+                        crafting a strong resume, preparing for interviews and practicing with mock questions.
+                    </p>
+                    <!-- Add more paragraphs and content as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Page Content End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        // Counter
+        var deadline = new Date("sep 12 2023 04:30:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var t = deadline - now;
+
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var Hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var Minute = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+
+            var Seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("counter").innerHTML = days + "d-" + Hours + "h-" + Minute + "M-" + Seconds + "s";
+
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("counter").innerHTML = "EXPIRED";
+            }
+        });
+    </script>
+</body>
+
+</html>
